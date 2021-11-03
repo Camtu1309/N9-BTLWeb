@@ -31,11 +31,12 @@ if (isset($_POST['id_hw']) && empty($_POST["id_hw"])) {
     if (empty($name_hw_err) && empty($require_err) && empty($time_ex_err)) {
         $sql = "UPDATE give_hw set name_hw='$name_hw', require='$require', time_ex='$time_ex' where id_hw = '$id_hw'";
         if ($stmt = mysqli_prepare($conn, $sql)) {
-            mysqli_stmt_bind_param($stmt, "ssd", $param_name, $param_require, $param_time_st, $param_time_ex);
+            mysqli_stmt_bind_param($stmt, "sssi", $param_name, $param_require, $param_time_st, $param_time_ex, $param_id_hw);
             $param_name = $name_hw;
             $param_require = $require;
             $param_time = $time_st;
             $param_time = $time_ex;
+            $param_id_hw = $id_hw;
             if (mysqli_stmt_execute($stmt)) {
                 header("location: exercise.php");
                 exit();
@@ -50,7 +51,7 @@ if (isset($_POST['id_hw']) && empty($_POST["id_hw"])) {
         $id_hw = trim($_GET["id_hw"]);
         $sql = "SELECT * FROM give_hw WHERE id_hw = ?";
         if ($stmt = mysqli_prepare($conn, $sql)) {
-            mysqli_stmt_bind_param($stmt, "ssd", $param_name, $param_require, $param_time_st, $param_time_ex);
+            mysqli_stmt_bind_param($stmt, "i", $param_id_hw);
             $param_id_hw = $id_hw;
             if (mysqli_stmt_execute($stmt)) {
                 $result = mysqli_stmt_get_result($stmt);
@@ -58,8 +59,8 @@ if (isset($_POST['id_hw']) && empty($_POST["id_hw"])) {
                     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     $name_hw = $row["name_hw"];
                     $require_hw = $row["require"];
-                    $time_st = $row["time_hw"];
-                    $time_ex = $row["time_hw"];
+                    $time_st = $row["time_st"];
+                    $time_ex = $row["time_ex"];
                 }
             } else {
                 header("location: exercise.php");
@@ -80,20 +81,20 @@ if (isset($_POST['id_hw']) && empty($_POST["id_hw"])) {
 
         <!-- sửa -->
         <div class="container col-md-12 mx-auto">
-            <form action="<?php echo htmlspecialchars(basename($_SERVER["REQUEST_URL"]));?>" METHOD="POST">
+            <form action="<?php echo htmlspecialchars(basename($_SERVER["REQUEST_URI"]));?>" METHOD="POST">
                 <div class="col-md-6 mx-auto">
                     <div class="form-group <?php echo(!empty($name_hw_err))? 'has-error':''; ?>">
-                        <label>Bài tập</label>
+                        <label><b>Bài tập</b></label>
                         <input type="file" class="form-control" name="name" accept="image/*">
                         <span class="help-block"><?php echo $name_hw_err; ?></span>
                     </div>
                     <div class="form-group <?php echo(!empty($require_err))? 'has-error':''; ?>">
-                        <label>Yêu cầu</label>
+                        <label><b>Yêu cầu</b></label>
                         <input type="text" class="form-control" name="yeucau" placeholder="Yêu cầu" >
                         <span class="help-block"><?php echo $require_err; ?></span>
                     </div>
                     <div class="form-group <?php echo(!empty($time_ex_err))? 'has-error':''; ?>">
-                        <label>Hạn nộp</label>
+                        <label><b>Hạn nộp</b></label>
                         <input type="datetime-local" id="meeting-time" class="form-control" name="date" placeholder="Nhập hạn nộp bài">
                         <span class="help-block"><?php echo $time_ex_err; ?></span>
                     </div>
