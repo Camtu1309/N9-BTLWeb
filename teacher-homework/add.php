@@ -1,75 +1,44 @@
 <?php
-
-session_start();
 include('config/constants.php');
 ?>
+<?php
+include('templates/header.php')
+?>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-<!DOCTYPE html>
-<html lang="en">
-<?php include('templates/header.php'); ?>
-<script type="text/javascript">
-	$(document).ready(function (e) {
- $("#form").on('submit',(function(e) {
-  e.preventDefault();
-  $.ajax({
-         url: "ajaxupload.php",
-   type: "POST",
-   data:  new FormData(this),
-   contentType: false,
-         cache: false,
-   processData:false,
-   beforeSend : function()
-   {
-    //$("#preview").fadeOut();
-    $("#err").fadeOut();
-   },
-   success: function(data)
-      {
-    if(data=='invalid')
-    {
-     // invalid file format.
-     $("#err").html("Invalid File !").fadeIn();
-    }
-    else
-    {
-     // view uploaded file.
-     $("#preview").html(data).fadeIn();
-     $("#form")[0].reset(); 
-    }
-      },
-     error: function(e) 
-      {
-    $("#err").html(e).fadeIn();
-      }          
-    });
- }));
-});
-</script>
-<div class="container">
-    <h2 class="text-center mt-2">Thêm bài tập</h2>
-    <form action="process-add.php" method="post" enctype="multipart/form-data">
-        <div class="col-md-6 mx-auto">
+<div class="main-content">
+    <div class="wrapper">
+        <div class="alert alert-success text-center" role="alert">
+            <h2>Thêm bài tập</h2>
+        </div>
 
-            <div class="form-group">
-                <label><b>Bài tập</b></label>
-                <input type="file" class="form-control" name="fileToUpload" accept="image/*">
-                <span class="help-block"></span>
-            </div>
-            <div class="form-group">
-                <label><b>Yêu cầu</b></label>
-                <input type="text" class="form-control" name="yeucau" placeholder="Yêu cầu">
-                <span class="help-block"></span>
-            </div>
-            <div class="form-group">
-                <label><b>Hạn nộp</b></label>
-                <input type="datetime-local" id="meeting-time" class="form-control" name="date">
-                <span class="help-block"></span>
-            </div>
-            <input type="submit" class="btn btn-primary" name="submit" value="Thêm">
+        <!-- them -->
+        <div class="container col-md-12 mx-auto">
+            <form action="process-add.php" METHOD="POST" >
+                <div class="col-md-6 mx-auto">
+                    <div class="input-group mb-2">
+                        <span class="input-group-text col-3">Bài tập</span>
+                        <input type="text" class="form-control" name="name" placeholder="Tên bài tập" id= "input-group-text col-3">
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <span class="input-group-text col-3">Yêu cầu</span>
+                        <input type="text" class="form-control" name="require" placeholder="Yêu cầu"  id= "input-group-text col-3">
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <span class="input-group-text col-3">Hạn nộp</span>
+                        <input type="datetime-local" id="meeting-time" class="form-control" name="date" placeholder="Nhập hạn nộp bài"  id= "input-group-text col-3">
+                    </div>
+
+                    <button type="submit" class="btn btn-info" name="submit">Thêm</button>
+
+                </div>
+            </form>
 
         </div>
-    </form>
+    </div>
 </div>
-<?php include('templates/footer.php'); ?>
-
-</html>
+<?php
+include('templates/footer.php');
+?>
