@@ -13,7 +13,7 @@
 
     // QUY TRÌNH 4 bước:
     // Bước 01:
-    include('config.php');
+    include('templates/config.php');
 
 
 
