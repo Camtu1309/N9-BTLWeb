@@ -8,7 +8,7 @@ include('templates/header.php')
                 <div class="row">
                     <div class="col-md-3">
                         <button style="margin:50px 0px 0px 70px ;background-color:  #f2f4f7;border: 1px solid hsla(0,0%,86.3%,.8); border-radius: 8px;  cursor: pointer; padding: 12px; width:150px; height:150px">
-                            <a href="http://localhost/btl/exercise.php"style="color: #000;text-decoration: none">
+                            <a href="http://localhost/N9-BTLWeb/teacher-homework/exercise.php?id_hw="style="color: #000;text-decoration: none">
                                 <div >
                                     <i class="far fa-calendar-check" style="color: #00a7d0; font-size: 50px;"></i>
                                     <p style="text-align: center;font-size:20px;  font-weight: 500">Bài Tập</p>
