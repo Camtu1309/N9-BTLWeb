@@ -25,12 +25,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <button type="button" class="btn btn-success" style="margin-top:30px; border-radius: 32px!important;background-color: #3081e8!important;border: none;">
-                                <a href="http://localhost/btl/signup.php" style="color: #fff;text-decoration: none">Đăng Nhập</a> 
+                                <a href="login.php" style="color: #fff;text-decoration: none">Đăng Nhập</a> 
                                 </button>
                             </div>
                             <div class="col-md-6">
                                 <button type="button" class="btn btn-success" style="margin-top:30px; border-radius: 32px!important; background-color: #f44025!important; width:106px;border: none;">
-                                <a href="http://localhost/btl/signup.php" style="color: #fff;text-decoration: none">Đăng ký </a>   
+                                <a href="signup.php" style="color: #fff;text-decoration: none">Đăng ký </a>   
                                 </button>
                             </div>
                         </div>
