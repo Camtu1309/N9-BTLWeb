@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `give_hw` (
   `id_hw` int(11) UNSIGNED NOT NULL,
   `name_hw` varchar(3000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `require` varchar(3000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `require_hw` varchar(3000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `time_st` datetime NOT NULL DEFAULT current_timestamp(),
   `time_ex` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
