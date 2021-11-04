@@ -2,7 +2,7 @@
     define('HOST','localhost');
     define('USER','root');
     define('PASS','');
-    define('DB','thi');
+    define('DB','manage_support');
 
     // Kết nối SERVER
     $conn = mysqli_connect(HOST,USER,PASS,DB);
