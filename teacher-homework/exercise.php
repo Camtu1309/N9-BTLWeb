@@ -70,7 +70,7 @@ include('templates/header.php')
                 ?>
                         <tr>
                             <th scope="row"><?php echo $i; ?></th>
-                            <td><?php echo $row['name_hw']; ?></td>
+                            <td><a href="submit.php"><?php echo $row['name_hw']; ?></a></td> 
                             <td><?php echo $row['require_hw']; ?></td>
                             <td><?php echo $row['time_st']; ?></td>
                             <td><?php echo $row['time_ex']; ?></td>
