@@ -18,7 +18,7 @@
             <div class="col-md-6" style="background-color: #f2f4f7;border: 1px solid rgba(0,0,0,.125);max-width: 450px; margin-left: auto; margin-right: auto;margin-top:50px">
                 <div>
                     <h2>
-                        <img src="img/logo.svg" alt="" style="width:180px; height:54px; display: block;margin-top:30px; margin-left: auto; margin-right: auto;">
+                        <img src="img/logo.png" alt="" style="width:180px; height:54px; display: block;margin-top:30px; margin-left: auto; margin-right: auto;">
                     </h2>
                     <h3 style="text-align: center;font: 400 16px/28px Roboto,Helvetica Neue,sans-serif;margin-top:16px">Nền tảng giáo dục số</h3>
                     <hr style="margin-top: 1rem;margin-bottom: 1rem; border: 0;border-top: 1px solid rgba(0,0,0,.1);">
