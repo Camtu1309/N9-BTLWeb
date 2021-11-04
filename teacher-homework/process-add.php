@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
 
     // Thực hiện quy trình 3 bước:
     // Bước 01: Kết nối DBS
-    require("config/constants.php");
+    require("templates/config.php");
 
     // Bước 02: Khai báo truy vấn
     $sql ="INSERT give_hw (name_hw,require_hw,time_ex) VALUES ('" . $name_hw . "','" . $require_hw . "','" . $time_ex . "')";

@@ -10,7 +10,7 @@
         die("Kết nối không thành công");
     }
   
-
+    mysqli_set_charset($conn,"utf8");
 
 
 

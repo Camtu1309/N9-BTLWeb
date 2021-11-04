@@ -2,7 +2,7 @@
 session_start();
 include('templates/header.php')
 ?>
-<h2 style="text-align: center; font-weight: 500; color:#3c5ca5;margin-top:50px">QUẢN LÝ BÀI TẬP BÀI TẬP VỀ NHÀ</h2>
+<h1 style="text-align: center; font-weight: 500; color:#3c5ca5;margin-top:50px">QUẢN LÝ BÀI TẬP VÀ GIAO BÀI TẬP</h1>
 <div class="header">
     <div class="container">
         <div class="row">
@@ -50,11 +50,11 @@ include('templates/header.php')
             <tbody>
 
                 <?php
-                require_once 'config/constants.php';
+                require_once 'templates/config.php';
 
                 #Lấy dữ liệu từ CSDL và đổ ra bảng(phần lặp lại)
                 #B1 kết nối với CSDL
-                $conn = mysqli_connect('localhost', 'root', '', 'btl');
+                $conn = mysqli_connect('localhost', 'root', '', 'manage_support');
                 mysqli_set_charset($conn, "utf8"); //Định dang font chữ 
                 if (!$conn) {
                     die("Không thể kết nối, kiểm tra lại các tham số kết nối");
@@ -71,7 +71,7 @@ include('templates/header.php')
                         <tr>
                             <th scope="row"><?php echo $i; ?></th>
                             <td><?php echo $row['name_hw']; ?></td>
-                            <td><?php echo $row['require']; ?></td>
+                            <td><?php echo $row['require_hw']; ?></td>
                             <td><?php echo $row['time_st']; ?></td>
                             <td><?php echo $row['time_ex']; ?></td>
                             <td><a href="update.php?id_hw=<?php echo $row['id_hw']; ?>"><i class="fas fa-edit"></i></a></td>

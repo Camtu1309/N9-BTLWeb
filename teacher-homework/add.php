@@ -1,6 +1,4 @@
-<?php
-include('config/constants.php');
-?>
+
 <?php
 include('templates/header.php')
 ?>
@@ -8,10 +6,7 @@ include('templates/header.php')
 
 <div class="main-content">
     <div class="wrapper">
-        <div class="alert alert-success text-center" role="alert">
-            <h2>Thêm bài tập</h2>
-        </div>
-
+        <h1 style="text-align: center; font-weight: 500; color:#3c5ca5;margin-top:50px; margin-bottom: 50px">THÊM BÀI TẬP</h1>
         <!-- them -->
         <div class="container col-md-12 mx-auto">
             <form action="process-add.php" METHOD="POST" >
