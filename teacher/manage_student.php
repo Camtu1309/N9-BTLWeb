@@ -2,7 +2,7 @@
 session_start();
 include('templates/header.php')
 ?>
-<h1 style="text-align: center; font-weight: 500; color:#3c5ca5;margin-top:50px">DÁCH SÁCH HỌC SINH</h1>
+<h1 style="text-align: center; font-weight: 500; color:#3c5ca5;margin-top:50px">DANH SÁCH HỌC SINH</h1>
 <div class="header">
     <div class="container">
         <div class="row">

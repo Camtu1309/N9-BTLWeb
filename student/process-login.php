@@ -5,7 +5,16 @@
 
     // QUY TRÌNH 4 bước:
     // Bước 01:
-    include('templates/config.php');
+    define('HOST','localhost');
+    define('USER','root');
+    define('PASS','');
+    define('DB','manage_support');
+
+    // Kết nối SERVER
+    $conn = mysqli_connect(HOST,USER,PASS,DB);
+    if(!$conn){
+        die("Kết nối không thành công");
+    }
 
     // Bước 02: Xử lý truy vấn
     $sql = "SELECT * FROM users_student WHERE email='$email'";
