@@ -46,7 +46,7 @@ include('templates/header.php')
                                     <th scope="col">Mã học sinh</th>
                                     <th scope="col">Họ Đệm học sinh</th>
                                     <th scope="col">Tên học sinh</th>
-                                    
+                                    <th scope="col">Tên bài tập</th>
                                     <th scope="col">file nộp</th>
                                     
                                     </tr>
@@ -63,7 +63,7 @@ include('templates/header.php')
                                         die("Không thể kết nối, kiểm tra lại các tham số kết nối");
                                     }
                                     #Bước 2: Khai báo câu lệnh thực thi và thực hiện truy vấn
-                                    $sql = "SELECT users_student.id_student, first_name, last_name, file_sb FROM submit, users_student, give_hw where submit.id_student = users_student.id_student AND submit.id_hw = give_hw.id_hw ";
+                                    $sql = "SELECT users_student.id_student, first_name, last_name, file_sb, name_hw FROM submit, users_student, give_hw where submit.id_student = users_student.id_student AND submit.id_hw = give_hw.id_hw ";
                                     $result = mysqli_query($conn,$sql);
                                     #Bước 3: Xử lí kết quả trả về
                                 
@@ -76,7 +76,7 @@ include('templates/header.php')
                                             <td><?php echo $row['id_student']; ?></td>
                                             <td><?php echo $row['first_name']; ?></td>
                                             <td><?php echo $row['last_name']; ?></td>
-                                        
+                                            <td><?php echo $row['name_hw']; ?></td>
                                             <td><?php echo $row['file_sb']; ?></td>
                                             
                                             </tr>
@@ -107,15 +107,21 @@ include('templates/header.php')
                                 <tbody>
 
                                     <?php
-
+                                     #Lấy dữ liệu từ CSDL và đổ ra bảng(phần lặp lại)
+                                    #B1 kết nối với CSDL
+                                    $conn=mysqli_connect('localhost','root','','manage_support');            
+                                    mysqli_set_charset($conn,"utf8");//Định dang font chữ 
+                                    if(!$conn){
+                                        die("Không thể kết nối, kiểm tra lại các tham số kết nối");
+                                    }
                                     #Khai báo câu lệnh thực thi và thực hiện truy vấn
-                                    $sql = "SELECT id_student, first_name, last_name from users_student where id_student = (SELECT id_student  FROM users_student EXCEPT SELECT id_student  FROM submit)";
-                                    $result = mysqli_query($conn,$sql);
+                                    $sql_1 = "SELECT id_student, first_name, last_name from users_student where id_student = (SELECT id_student  FROM users_student EXCEPT SELECT id_student  FROM submit)";
+                                    $result_1 = mysqli_query($conn,$sql_1);
                                     #Xử lí kết quả trả về
                                 
-                                    if(mysqli_num_rows($result)>0){
+                                    if(mysqli_num_rows($result_1)>0){
                                         $i=1;
-                                        while($row = mysqli_fetch_assoc($result)){
+                                        while($row = mysqli_fetch_assoc($result_1)){
                                     ?>
                                             <tr>
                                             <th scope="row"><?php echo $i; ?></th>

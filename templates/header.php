@@ -34,8 +34,8 @@
                                                 
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item " href="http://localhost/btl/page.php">Về trang chủ</a>
-                                                 <a class="dropdown-item" href="#">Đăng xuất</a> 
+                                                <a class="dropdown-item " href="">Về trang chủ</a>
+                                                 <a class="dropdown-item" href="">Đăng xuất</a> 
                                             </div>
                                         </div>
                                     </div>

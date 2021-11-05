@@ -48,6 +48,35 @@ include('templates/header.php')
                     </div>
                 </div>
             </div>
+           
+        </div>
+        </div>
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <button style="margin:50px 0px 0px 70px ;background-color:  #f2f4f7;border: 1px solid hsla(0,0%,86.3%,.8); border-radius: 8px;  cursor: pointer; padding: 12px; width:150px; height:150px">
+                            <a href="http://localhost/N9-BTLWeb/teacher/manage_student.php"style="color: #000;text-decoration: none">
+                                <div >
+                                    <i class="fas fa-user-friends" style="color: #bf3232; font-size: 50px;"></i>
+                                    <p style="text-align: center;font-size:20px;  font-weight: 500">Học sinh</p>
+                                </div>
+                            </a>
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        
+                    </div>
+                    <div class="col-md-3">
+                       
+                    </div>
+                    <div class="col-md-3">
+                       
+                    </div>
+                </div>
+            </div>
+           
         </div>
         </div>
 <?php
