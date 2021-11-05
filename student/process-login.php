@@ -26,7 +26,7 @@
         
         if(password_verify($pass,$pass_hash)){
             $_SESSION['login_ok'] = $email;
-            header("Location:page.php");
+            header("Location:trangchu2.php");
         }else{
             
            
