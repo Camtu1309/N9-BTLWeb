@@ -30,7 +30,7 @@
                             </div>
                             <div class="col-md-6">
                                 <button type="button" class="btn btn-success" style="margin-top:30px; border-radius: 32px!important; background-color: #f44025!important; width:106px;border: none;">
-                                <a href="signup.php" style="color: #fff;text-decoration: none">Đăng ký </a>   
+                                <a href="templates/signup.php" style="color: #fff;text-decoration: none">Đăng ký </a>   
                                 </button>
                             </div>
                         </div>

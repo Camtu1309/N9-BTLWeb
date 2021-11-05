@@ -47,7 +47,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary " name="submit" style="width:422px; height:34px; background-color:  #3c5ca5;" >ĐĂNG NHẬP</button>
                 <h3 style="text-align: center;font: 400 16px/28px Roboto,Helvetica Neue,sans-serif;margin-top:16px">Quên mật khẩu?</h3>
-                <a href="http://localhost/btl/register.php" style="text-decoration: none"><p style="text-align: center;">Đăng ký</p></a> 
+                <a href="register.php" style="text-decoration: none"><p style="text-align: center;">Đăng ký</p></a> 
             </div>
             <div class="col-md-3">
             </div>
