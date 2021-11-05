@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-md-6" >
                                 <button style="margin:20px 0px 30px 0px ;background-color: #fff;border: 1px solid hsla(0,0%,86.3%,.8); border-radius: 8px;  cursor: pointer; padding: 12px; width:150px; ">
-                                    <a href="http://localhost/btl/register.php"style="color: #000;text-decoration: none">
+                                    <a href="http://localhost/N9-BTLWeb/student/register.php"style="color: #000;text-decoration: none">
                                         <div >
                                             <i class="fas fa-user-graduate"style="font-size: 30px;  "></i>
                                             <p style="text-align: center;">Tôi là học sinh</p>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="col-md-6" >
                                 <button style="margin:20px 0px 0px 30px; background-color: #fff;border: 1px solid hsla(0,0%,86.3%,.8); border-radius: 8px;  cursor: pointer; padding: 12px; width:150px;  ">
-                                    <a href="http://localhost/btl/register.php"style="color: #000;text-decoration: none">
+                                    <a href="http://localhost/N9-BTLWeb/teacher/register.php"style="color: #000;text-decoration: none">
                                         <div >
                                             <i class="fas fa-user-edit"style="font-size: 30px;"></i>
                                             <p style="text-align: center;">Tôi là giáo viên</p>
