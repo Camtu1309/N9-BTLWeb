@@ -61,6 +61,6 @@ include('templates/header.php')
         
 
 <?php
-session_start();
+
 include('templates/footer.php')
 ?>
