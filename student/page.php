@@ -11,7 +11,7 @@ include('templates/header.php')
                             <a href="http://localhost/N9-BTLWeb/student/exercises.php"style="color: #000;text-decoration: none">
                                 <div >
                                     <i class="far fa-calendar-check" style="color: #00a7d0; font-size: 50px;"></i>
-                                    <p style="text-align: center;font-size:20px;  font-weight: 500">Bài tập</p>
+                                    <p style="text-align: center;font-size:20px;  font-weight: 500">BÀI TẬP</p>
                                 </div>
                             </a>
                         </button>
@@ -23,7 +23,7 @@ include('templates/header.php')
                                 <a href=""style="color: #000;text-decoration: none">
                                     <div >
                                         <i class="fas fa-handshake" style="font-size: 50px;color: #f39c12; "></i>
-                                        <p style="text-align: center;font-size:20px;  font-weight: 500">Nhóm</p>
+                                        <p style="text-align: center;font-size:20px;  font-weight: 500">NHÓM</p>
                                     </div>
                                 </a>
                         </button>
