@@ -23,7 +23,7 @@ include('templates/header.php')
                                 <a href=""style="color: #000;text-decoration: none">
                                     <div >
                                         <i class="fas fa-handshake" style="font-size: 50px;color: #f39c12; "></i>
-                                        <p style="text-align: center;font-size:20px;  font-weight: 500">NHÓM BÀI TẬP LỚN</p>
+                                        <p style="text-align: center;font-size:20px;  font-weight: 500">NHÓM</p>
                                     </div>
                                 </a>
                         </button>
