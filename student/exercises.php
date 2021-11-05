@@ -41,7 +41,7 @@ include('templates/header.php')
                             <tr>
                                 <th scope="row"><?php echo $i; ?></th>
                                 <td><?php echo $row['name_hw']; ?></td>
-                                <td><?php echo $row['require']; ?></td>
+                                <td><?php echo $row['require_hw']; ?></td>
                                 <td><?php echo $row['time_st']; ?></td>
                                 <td><?php echo $row['time_ex']; ?></td>
                                 <td><a href="http://localhost/N9-BTLWeb/student/submit.php"><i class="far fa-plus-square" style="text-align: center;"></i> </a></td>
